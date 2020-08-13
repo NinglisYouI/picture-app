@@ -1,0 +1,33 @@
+include_guard(GLOBAL)
+
+set(YI_NATIVEMODULES_INCLUDES)
+
+file(GLOB_RECURSE _TEMP_NATIVEMODULES_SOURCE
+  )
+
+file(GLOB_RECURSE _TEMP_NATIVEMODULES_HEADERS
+  )
+
+set(_TEMP_NATIVEMODULES_AE_ASSET_PATHS
+  )
+
+# This logic is so any included SourceList.cmake file in a found native module can either set or append to
+# the YI_NATIVEMODULES_ variables. We load and append all the vars together, and duplicates removed after.
+# Note: These files must have full paths to the files so use CMAKE_CURRENT_LIST_DIR or similar.
+set(YI_NATIVEMODULES_SOURCE ${_TEMP_NATIVEMODULES_SOURCE})
+set(YI_NATIVEMODULES_HEADERS ${_TEMP_NATIVEMODULES_HEADERS})
+set(YI_NATIVEMODULES_AE_ASSET_PATHS ${_TEMP_NATIVEMODULES_AE_ASSET_PATHS})
+if(YI_NATIVEMODULES_SOURCE)
+  list(REMOVE_DUPLICATES YI_NATIVEMODULES_SOURCE)
+endif()
+if(YI_NATIVEMODULES_HEADERS)
+  list(REMOVE_DUPLICATES YI_NATIVEMODULES_HEADERS)
+endif()
+if(YI_NATIVEMODULES_AE_ASSET_PATHS)
+  list(REMOVE_DUPLICATES YI_NATIVEMODULES_AE_ASSET_PATHS)
+endif()
+
+yi_status_debug("NativeModules.cmake:")
+yi_status_debug("YI_NATIVEMODULES_SOURCE  ${YI_NATIVEMODULES_SOURCE}")
+yi_status_debug("YI_NATIVEMODULES_HEADERS  ${YI_NATIVEMODULES_HEADERS}")
+yi_status_debug("YI_NATIVEMODULES_AE_ASSET_PATHS  ${YI_NATIVEMODULES_AE_ASSET_PATHS}")

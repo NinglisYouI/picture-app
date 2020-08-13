@@ -1,0 +1,244 @@
+activecomp {
+  name: "Player_Playback-Controls"
+  width: 1920
+  height: 1080
+  defaultcameradistance: 2666.6667
+  layer {
+    name: "Gradient-Player.png"
+    id: 634
+    sourceid: 2648
+    transform {
+      anchorPoint {
+        x: 0.5
+        y: 274
+        z: 0
+      }
+      scale {
+        x: 1960
+        y: 1
+        z: 1
+      }
+      position {
+        x: 960
+        y: 806
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "PlayPause-Container"
+    id: 635
+    sourceid: 17234
+    transform {
+      anchorPoint {
+        x: 62.5
+        y: 62.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 960
+        y: 1085
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "Placeholder-Time"
+    id: 636
+    sourceid: -1
+    transform {
+      anchorPoint {
+        x: 0
+        y: 18.249889
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 1695.5
+        y: 993
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+    textinfo {
+      justification: AE_TEXT_LEFT
+      fontSize: 25
+      fontColor {
+        alpha: 1
+        red: 1
+        green: 1
+        blue: 1
+      }
+      fontName: "ArialMT"
+      isPointText: false
+      boundsWidth: 190
+      boundsHeight: 29
+      multiline: true
+      isAllCaps: false
+    }
+  }
+  layer {
+    name: "Player-Scrubber"
+    id: 637
+    sourceid: 1545
+    transform {
+      anchorPoint {
+        x: 816
+        y: 146.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 960
+        y: 874.5
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  layer {
+    name: "Btn-Back-Container"
+    id: 638
+    sourceid: 17139
+    transform {
+      anchorPoint {
+        x: 105
+        y: 40.5
+        z: 0
+      }
+      scale {
+        x: 1
+        y: 1
+        z: 1
+      }
+      position {
+        x: 1737
+        y: 120
+        z: 0
+      }
+      orientation {
+        x: 0
+        y: 0
+        z: 0
+      }
+      rotationX: 0
+      rotationY: 0
+      rotationZ: 0
+      opacity: 0
+    }
+    acceptsshadows: true
+    acceptslights: true
+    castsshadows: false
+  }
+  bgcolor {
+    alpha: 1
+    red: 0
+    green: 0
+    blue: 0
+  }
+  childtemplates: "Player_PlayPause-Container"
+  childtemplates: "Player_Player-Scrubber"
+  childtemplates: "Player_Btn-Back-Container"
+}
+sources {
+  uid: 2648
+  srctype: AE_IMAGE_SRC
+  name: "Gradient-Player.png"
+  width: 1
+  height: 548
+  numberOfFrames: 1
+  fps: 0
+  loops: 1
+  copy_source: true
+}
+sources {
+  uid: 17234
+  srctype: AE_COMP_SRC
+  name: "Player_PlayPause-Container.layout"
+  width: 125
+  height: 125
+  copy_source: true
+}
+sources {
+  uid: 3
+  srctype: AE_FONT_SRC
+  name: "ArialMT"
+  copy_source: true
+  file_name: "yi_Arial-Regular.ttf"
+  style_name: "Regular"
+}
+sources {
+  uid: 1545
+  srctype: AE_COMP_SRC
+  name: "Player_Player-Scrubber.layout"
+  width: 1632
+  height: 293
+  copy_source: true
+}
+sources {
+  uid: 17139
+  srctype: AE_COMP_SRC
+  name: "Player_Btn-Back-Container.layout"
+  width: 210
+  height: 81
+  copy_source: true
+}
